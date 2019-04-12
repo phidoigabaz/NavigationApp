@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let introVC = IntroViewController.init(nibName: "IntroViewController", bundle: nil)
+        let introNav = BaseNavigationController.init(rootViewController: introVC)
+        window?.rootViewController = introNav
         return true
     }
 

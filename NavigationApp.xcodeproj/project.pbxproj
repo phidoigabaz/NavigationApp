@@ -7,14 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24744AB4478EAB283AF6F805 /* Pods_NavigationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0D170F71CD40A6FE703E49 /* Pods_NavigationApp.framework */; };
+		B6943548226032580087F5E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6943546226032580087F5E3 /* HomeViewController.swift */; };
+		B6943549226032580087F5E3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6943547226032580087F5E3 /* HomeViewController.xib */; };
+		B694354B226036290087F5E3 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B694354A226036290087F5E3 /* Mapbox.framework */; };
+		B694354C226036290087F5E3 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B694354A226036290087F5E3 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B694355222606EAB0087F5E3 /* HomeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694355022606EAB0087F5E3 /* HomeItemCollectionViewCell.swift */; };
+		B694355322606EAB0087F5E3 /* HomeItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B694355122606EAB0087F5E3 /* HomeItemCollectionViewCell.xib */; };
+		B694355A22609E060087F5E3 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694355922609E060087F5E3 /* FlowLayout.swift */; };
 		B6FCF057225F2BDB00AE23E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF056225F2BDB00AE23E9 /* AppDelegate.swift */; };
 		B6FCF059225F2BDB00AE23E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF058225F2BDB00AE23E9 /* ViewController.swift */; };
 		B6FCF05C225F2BDB00AE23E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FCF05A225F2BDB00AE23E9 /* Main.storyboard */; };
 		B6FCF05E225F2BDC00AE23E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FCF05D225F2BDC00AE23E9 /* Assets.xcassets */; };
 		B6FCF061225F2BDC00AE23E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FCF05F225F2BDC00AE23E9 /* LaunchScreen.storyboard */; };
+		B6FCF06F225F2C8D00AE23E9 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF06D225F2C8D00AE23E9 /* IntroViewController.swift */; };
+		B6FCF070225F2C8D00AE23E9 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FCF06E225F2C8D00AE23E9 /* IntroViewController.xib */; };
+		B6FCF074225F372B00AE23E9 /* IntroItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF072225F372B00AE23E9 /* IntroItemTableViewCell.swift */; };
+		B6FCF075225F372B00AE23E9 /* IntroItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FCF073225F372B00AE23E9 /* IntroItemTableViewCell.xib */; };
+		B6FCF078225F3AE800AE23E9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF077225F3AE800AE23E9 /* UIViewControllerExtension.swift */; };
+		B6FCF081225F3AF600AE23E9 /* UICustomViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF079225F3AF600AE23E9 /* UICustomViewExtension.swift */; };
+		B6FCF082225F3AF600AE23E9 /* UINotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF07A225F3AF600AE23E9 /* UINotificationExtension.swift */; };
+		B6FCF083225F3AF600AE23E9 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF07B225F3AF600AE23E9 /* UITableViewCellExtension.swift */; };
+		B6FCF084225F3AF600AE23E9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF07C225F3AF600AE23E9 /* UIColorExtension.swift */; };
+		B6FCF085225F3AF600AE23E9 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF07D225F3AF600AE23E9 /* UIImageViewExtension.swift */; };
+		B6FCF086225F3AF600AE23E9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF07E225F3AF600AE23E9 /* StringExtension.swift */; };
+		B6FCF087225F3AF600AE23E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF07F225F3AF600AE23E9 /* UIColor.swift */; };
+		B6FCF088225F3AF600AE23E9 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF080225F3AF600AE23E9 /* UICollectionViewCellExtension.swift */; };
+		B6FCF08B225F3B6700AE23E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF08A225F3B6700AE23E9 /* Constants.swift */; };
+		B6FCF08D225F3C3B00AE23E9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF08C225F3C3B00AE23E9 /* BaseNavigationController.swift */; };
+		B6FCF08F225F3C5300AE23E9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF08E225F3C5300AE23E9 /* BaseViewController.swift */; };
+		B6FCF091225F3D0200AE23E9 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF090225F3D0100AE23E9 /* UIBarButtonItemExtension.swift */; };
+		B6FCF093225F400200AE23E9 /* UIButtomCustomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF092225F400200AE23E9 /* UIButtomCustomExtension.swift */; };
+		B6FCF095225F443700AE23E9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF094225F443700AE23E9 /* UIViewExtension.swift */; };
+		B6FCF099225F47CB00AE23E9 /* DownloadMapOfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF097225F47CB00AE23E9 /* DownloadMapOfflineViewController.swift */; };
+		B6FCF09A225F47CB00AE23E9 /* DownloadMapOfflineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FCF098225F47CB00AE23E9 /* DownloadMapOfflineViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B694354D226036290087F5E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B694354C226036290087F5E3 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0B0D170F71CD40A6FE703E49 /* Pods_NavigationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5785156147E3277FF660BB8F /* Pods-NavigationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp.release.xcconfig"; path = "Target Support Files/Pods-NavigationApp/Pods-NavigationApp.release.xcconfig"; sourceTree = "<group>"; };
+		B6943546226032580087F5E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B6943547226032580087F5E3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B694354A226036290087F5E3 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		B694355022606EAB0087F5E3 /* HomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		B694355122606EAB0087F5E3 /* HomeItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		B694355522608D320087F5E3 /* NavigationApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NavigationApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		B694355922609E060087F5E3 /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		B6FCF053225F2BDB00AE23E9 /* NavigationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FCF056225F2BDB00AE23E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FCF058225F2BDB00AE23E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +74,28 @@
 		B6FCF05D225F2BDC00AE23E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6FCF060225F2BDC00AE23E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6FCF062225F2BDC00AE23E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6FCF06D225F2C8D00AE23E9 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		B6FCF06E225F2C8D00AE23E9 /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		B6FCF072225F372B00AE23E9 /* IntroItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroItemTableViewCell.swift; sourceTree = "<group>"; };
+		B6FCF073225F372B00AE23E9 /* IntroItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroItemTableViewCell.xib; sourceTree = "<group>"; };
+		B6FCF077225F3AE800AE23E9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		B6FCF079225F3AF600AE23E9 /* UICustomViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomViewExtension.swift; sourceTree = "<group>"; };
+		B6FCF07A225F3AF600AE23E9 /* UINotificationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINotificationExtension.swift; sourceTree = "<group>"; };
+		B6FCF07B225F3AF600AE23E9 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		B6FCF07C225F3AF600AE23E9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B6FCF07D225F3AF600AE23E9 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		B6FCF07E225F3AF600AE23E9 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B6FCF07F225F3AF600AE23E9 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B6FCF080225F3AF600AE23E9 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
+		B6FCF08A225F3B6700AE23E9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B6FCF08C225F3C3B00AE23E9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		B6FCF08E225F3C5300AE23E9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B6FCF090225F3D0100AE23E9 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		B6FCF092225F400200AE23E9 /* UIButtomCustomExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtomCustomExtension.swift; sourceTree = "<group>"; };
+		B6FCF094225F443700AE23E9 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B6FCF097225F47CB00AE23E9 /* DownloadMapOfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadMapOfflineViewController.swift; sourceTree = "<group>"; };
+		B6FCF098225F47CB00AE23E9 /* DownloadMapOfflineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadMapOfflineViewController.xib; sourceTree = "<group>"; };
+		F6952F283207B7A4D593D724 /* Pods-NavigationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp.debug.xcconfig"; path = "Target Support Files/Pods-NavigationApp/Pods-NavigationApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +103,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24744AB4478EAB283AF6F805 /* Pods_NavigationApp.framework in Frameworks */,
+				B694354B226036290087F5E3 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31FB758AA57DD63426443EB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B0D170F71CD40A6FE703E49 /* Pods_NavigationApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38CF1621AC4C24D0B454F8EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6952F283207B7A4D593D724 /* Pods-NavigationApp.debug.xcconfig */,
+				5785156147E3277FF660BB8F /* Pods-NavigationApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B69435452260324B0087F5E3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B694354F22606C0B0087F5E3 /* CustomView */,
+				B6943546226032580087F5E3 /* HomeViewController.swift */,
+				B6943547226032580087F5E3 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B694354F22606C0B0087F5E3 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B694355022606EAB0087F5E3 /* HomeItemCollectionViewCell.swift */,
+				B694355122606EAB0087F5E3 /* HomeItemCollectionViewCell.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		B694355422608D250087F5E3 /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B694355522608D320087F5E3 /* NavigationApp-Bridging-Header.h */,
+				B694355922609E060087F5E3 /* FlowLayout.swift */,
+			);
+			path = FlowLayout;
+			sourceTree = "<group>";
+		};
 		B6FCF04A225F2BDB00AE23E9 = {
 			isa = PBXGroup;
 			children = (
+				B694354A226036290087F5E3 /* Mapbox.framework */,
 				B6FCF055225F2BDB00AE23E9 /* NavigationApp */,
 				B6FCF054225F2BDB00AE23E9 /* Products */,
+				38CF1621AC4C24D0B454F8EE /* Pods */,
+				31FB758AA57DD63426443EB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +178,10 @@
 		B6FCF055225F2BDB00AE23E9 /* NavigationApp */ = {
 			isa = PBXGroup;
 			children = (
+				B6FCF06B225F2C5100AE23E9 /* Framework */,
+				B6FCF069225F2C2A00AE23E9 /* Helper */,
+				B6FCF06A225F2C3400AE23E9 /* Scense */,
+				B6FCF068225F2C1E00AE23E9 /* Base */,
 				B6FCF056225F2BDB00AE23E9 /* AppDelegate.swift */,
 				B6FCF058225F2BDB00AE23E9 /* ViewController.swift */,
 				B6FCF05A225F2BDB00AE23E9 /* Main.storyboard */,
@@ -64,6 +192,98 @@
 			path = NavigationApp;
 			sourceTree = "<group>";
 		};
+		B6FCF068225F2C1E00AE23E9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF08E225F3C5300AE23E9 /* BaseViewController.swift */,
+				B6FCF08C225F3C3B00AE23E9 /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B6FCF069225F2C2A00AE23E9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF089225F3B5C00AE23E9 /* Constants */,
+				B6FCF076225F3AC100AE23E9 /* Extension */,
+			);
+			name = Helper;
+			path = "Helpẻ";
+			sourceTree = "<group>";
+		};
+		B6FCF06A225F2C3400AE23E9 /* Scense */ = {
+			isa = PBXGroup;
+			children = (
+				B69435452260324B0087F5E3 /* Home */,
+				B6FCF096225F479900AE23E9 /* OfflineMap */,
+				B6FCF06C225F2C7600AE23E9 /* Intro */,
+			);
+			path = Scense;
+			sourceTree = "<group>";
+		};
+		B6FCF06B225F2C5100AE23E9 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				B694355422608D250087F5E3 /* FlowLayout */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		B6FCF06C225F2C7600AE23E9 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF071225F371500AE23E9 /* CustomView */,
+				B6FCF06D225F2C8D00AE23E9 /* IntroViewController.swift */,
+				B6FCF06E225F2C8D00AE23E9 /* IntroViewController.xib */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		B6FCF071225F371500AE23E9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF072225F372B00AE23E9 /* IntroItemTableViewCell.swift */,
+				B6FCF073225F372B00AE23E9 /* IntroItemTableViewCell.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		B6FCF076225F3AC100AE23E9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF092225F400200AE23E9 /* UIButtomCustomExtension.swift */,
+				B6FCF090225F3D0100AE23E9 /* UIBarButtonItemExtension.swift */,
+				B6FCF077225F3AE800AE23E9 /* UIViewControllerExtension.swift */,
+				B6FCF07E225F3AF600AE23E9 /* StringExtension.swift */,
+				B6FCF080225F3AF600AE23E9 /* UICollectionViewCellExtension.swift */,
+				B6FCF07F225F3AF600AE23E9 /* UIColor.swift */,
+				B6FCF07C225F3AF600AE23E9 /* UIColorExtension.swift */,
+				B6FCF079225F3AF600AE23E9 /* UICustomViewExtension.swift */,
+				B6FCF07D225F3AF600AE23E9 /* UIImageViewExtension.swift */,
+				B6FCF07A225F3AF600AE23E9 /* UINotificationExtension.swift */,
+				B6FCF07B225F3AF600AE23E9 /* UITableViewCellExtension.swift */,
+				B6FCF094225F443700AE23E9 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6FCF089225F3B5C00AE23E9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF08A225F3B6700AE23E9 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B6FCF096225F479900AE23E9 /* OfflineMap */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF097225F47CB00AE23E9 /* DownloadMapOfflineViewController.swift */,
+				B6FCF098225F47CB00AE23E9 /* DownloadMapOfflineViewController.xib */,
+			);
+			path = OfflineMap;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +291,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6FCF065225F2BDC00AE23E9 /* Build configuration list for PBXNativeTarget "NavigationApp" */;
 			buildPhases = (
+				B4433073762C859128DDBEC3 /* [CP] Check Pods Manifest.lock */,
 				B6FCF04F225F2BDB00AE23E9 /* Sources */,
 				B6FCF050225F2BDB00AE23E9 /* Frameworks */,
 				B6FCF051225F2BDB00AE23E9 /* Resources */,
+				550823B941CBD2981ACB42EA /* [CP] Embed Pods Frameworks */,
+				B694354D226036290087F5E3 /* Embed Frameworks */,
+				B694354E226036310087F5E3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -96,6 +320,7 @@
 				TargetAttributes = {
 					B6FCF052225F2BDB00AE23E9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -123,20 +348,112 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6FCF061225F2BDC00AE23E9 /* LaunchScreen.storyboard in Resources */,
+				B6FCF075225F372B00AE23E9 /* IntroItemTableViewCell.xib in Resources */,
 				B6FCF05E225F2BDC00AE23E9 /* Assets.xcassets in Resources */,
 				B6FCF05C225F2BDB00AE23E9 /* Main.storyboard in Resources */,
+				B6FCF070225F2C8D00AE23E9 /* IntroViewController.xib in Resources */,
+				B6943549226032580087F5E3 /* HomeViewController.xib in Resources */,
+				B694355322606EAB0087F5E3 /* HomeItemCollectionViewCell.xib in Resources */,
+				B6FCF09A225F47CB00AE23E9 /* DownloadMapOfflineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		550823B941CBD2981ACB42EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationApp/Pods-NavigationApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ButtonProgressBar-iOS/ButtonProgressBar_iOS.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ButtonProgressBar_iOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationApp/Pods-NavigationApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4433073762C859128DDBEC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NavigationApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B694354E226036310087F5E3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6FCF04F225F2BDB00AE23E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FCF091225F3D0200AE23E9 /* UIBarButtonItemExtension.swift in Sources */,
+				B694355A22609E060087F5E3 /* FlowLayout.swift in Sources */,
+				B6FCF099225F47CB00AE23E9 /* DownloadMapOfflineViewController.swift in Sources */,
+				B6FCF085225F3AF600AE23E9 /* UIImageViewExtension.swift in Sources */,
+				B6FCF087225F3AF600AE23E9 /* UIColor.swift in Sources */,
+				B6FCF082225F3AF600AE23E9 /* UINotificationExtension.swift in Sources */,
+				B6943548226032580087F5E3 /* HomeViewController.swift in Sources */,
+				B6FCF06F225F2C8D00AE23E9 /* IntroViewController.swift in Sources */,
+				B6FCF074225F372B00AE23E9 /* IntroItemTableViewCell.swift in Sources */,
+				B6FCF078225F3AE800AE23E9 /* UIViewControllerExtension.swift in Sources */,
 				B6FCF059225F2BDB00AE23E9 /* ViewController.swift in Sources */,
+				B6FCF084225F3AF600AE23E9 /* UIColorExtension.swift in Sources */,
+				B6FCF08D225F3C3B00AE23E9 /* BaseNavigationController.swift in Sources */,
+				B694355222606EAB0087F5E3 /* HomeItemCollectionViewCell.swift in Sources */,
 				B6FCF057225F2BDB00AE23E9 /* AppDelegate.swift in Sources */,
+				B6FCF093225F400200AE23E9 /* UIButtomCustomExtension.swift in Sources */,
+				B6FCF088225F3AF600AE23E9 /* UICollectionViewCellExtension.swift in Sources */,
+				B6FCF095225F443700AE23E9 /* UIViewExtension.swift in Sources */,
+				B6FCF081225F3AF600AE23E9 /* UICustomViewExtension.swift in Sources */,
+				B6FCF08B225F3B6700AE23E9 /* Constants.swift in Sources */,
+				B6FCF08F225F3C5300AE23E9 /* BaseViewController.swift in Sources */,
+				B6FCF086225F3AF600AE23E9 /* StringExtension.swift in Sources */,
+				B6FCF083225F3AF600AE23E9 /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,17 +597,26 @@
 		};
 		B6FCF066225F2BDC00AE23E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6952F283207B7A4D593D724 /* Pods-NavigationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SLX6K58ZQH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NavigationApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = d09.NavigationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NavigationApp/Framework/FlowLayout/NavigationApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,17 +624,25 @@
 		};
 		B6FCF067225F2BDC00AE23E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5785156147E3277FF660BB8F /* Pods-NavigationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SLX6K58ZQH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NavigationApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = d09.NavigationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NavigationApp/Framework/FlowLayout/NavigationApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
