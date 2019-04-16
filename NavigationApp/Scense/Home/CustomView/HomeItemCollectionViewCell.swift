@@ -18,7 +18,8 @@ class HomeItemCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         self.setBorderView(1, .black)
-        self.setRadiusView(self.frame.height/15)
-        self.maxWidthConstraint.constant = UIScreen.main.bounds.width - 8 * 2 - 8 * 2
+        self.setRadiusView(self.frame.height/12.5)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        //self.maxWidthConstraint.constant = UIScreen.main.bounds.width - 8 * 2 - 8 * 2
     }
 }

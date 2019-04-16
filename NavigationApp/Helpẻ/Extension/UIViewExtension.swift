@@ -17,6 +17,11 @@ extension UIView {
         return nib
     }
     
+    class func classString() -> String! {
+        let str = String(describing: self)
+        return str
+    }
+    
     func applyShadowView(width: CGFloat, height: CGFloat) {
         let shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: 14.0)
         self.layer.masksToBounds = false

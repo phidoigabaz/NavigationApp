@@ -7,5 +7,8 @@ target 'NavigationApp' do
 
 pod 'ButtonProgressBar-iOS'
 pod 'Kingfisher'
+pod 'MapboxDirections.swift', '~> 0.27'
+pod 'PagingKit', '~> 1.9.0'
+pod 'MapboxGeocoder.swift', '~> 0.10.2'
 
 end

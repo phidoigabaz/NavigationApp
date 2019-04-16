@@ -18,6 +18,8 @@ struct Constants {
     static let iWidth = UIScreen.main.bounds.width
     static let iHeight = UIScreen.main.bounds.height
     
+    static let cardWidth: CGFloat = 122
+    
     static let kUserDefault = "kUserdefault"
 }
 
