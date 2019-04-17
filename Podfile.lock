@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.1)
   - ButtonProgressBar-iOS (1.0.1)
   - Kingfisher (5.1.1)
   - MapboxDirections.swift (0.27.1):
@@ -6,31 +7,38 @@ PODS:
   - MapboxGeocoder.swift (0.10.2)
   - PagingKit (1.9.0)
   - Polyline (4.2.0)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - Alamofire
   - ButtonProgressBar-iOS
   - Kingfisher
   - MapboxDirections.swift (~> 0.27)
   - MapboxGeocoder.swift (~> 0.10.2)
   - PagingKit (~> 1.9.0)
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - ButtonProgressBar-iOS
     - Kingfisher
     - MapboxDirections.swift
     - MapboxGeocoder.swift
     - PagingKit
     - Polyline
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   ButtonProgressBar-iOS: 1127f15c7ab843648febc857fc2018c8224675c7
   Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
   MapboxDirections.swift: b53792956b0233c8c5aa75972ce99b2001cafd10
   MapboxGeocoder.swift: 8cff5dddf98d87838509bf80a5bce5f1d0cf8393
   PagingKit: a65ffc616296d617ac89897a986263fdae766db4
   Polyline: 3d69f75bb136357e27291d439d0436c6ebda57a4
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 91e1210ae68444d26675edfee7a916e1170834f2
+PODFILE CHECKSUM: 848f41077804ee29f84559b552d3df28e92d678b
 
 COCOAPODS: 1.6.1

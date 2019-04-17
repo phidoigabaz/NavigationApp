@@ -26,6 +26,8 @@ class SearchViewController: BaseViewController {
     
     var selectedTab = 0
     weak var delegate: SearchTextFieldDelegate?
+    var searchModel = [SearchModel]()
+    let settingService = SettingService()
     
     let dataSource: [(item: String, content: UIViewController)] = ["History", "Categories"].map {
         
@@ -45,6 +47,7 @@ class SearchViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadMenuView()
+        searchTextField.delegate = self
     }
     
     //MARK: METHODS
@@ -86,14 +89,31 @@ class SearchViewController: BaseViewController {
                 self.tableView.isHidden = false
                 self.menuView.isHidden = true
                 self.pagingView.isHidden = true
+                self.tableView.reloadData()
             } else {
                 self.clearButton.isHidden = true
                 self.tableView.isHidden = true
                 self.menuView.isHidden = false
                 self.pagingView.isHidden = false
+                self.tableView.reloadData()
             }
         }
     }
+    
+    func getData() {
+        if let textSearch = searchTextField.text {
+            settingService.cancelAllRequests()
+            settingService.searchPlace(textSearch) { (model, err) in
+                if err == nil {
+                    self.searchModel = model
+                    self.tableView.reloadData()
+                } else {
+                    print(err?.localizedDescription ?? "loi~")
+                }
+            }
+        }
+    }
+    
     //MARK: ACTIONS
     @IBAction func onClearTextAction(_ sender: Any) {
         searchTextField.text = nil
@@ -165,3 +185,49 @@ extension SearchViewController: PagingContentViewControllerDelegate {
     }
 }
 
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        default:
+            return searchModel.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0:
+            let cell = FilterTableViewCell.dequeueReuseCellWithNib(in: tableView, reuseIdentifier: FilterTableViewCell.nibName())
+            return cell
+        default:
+            let cell = SearchItemPlaceTableViewCell.dequeueReuseCellWithNib(in: tableView, reuseIdentifier: SearchItemPlaceTableViewCell.nibName())
+            cell.bindingWithData(searchModel[indexPath.row])
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 100
+        default:
+            return UITableView.automaticDimension
+        }
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.getData()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.estimatedRowHeight = 200
+        self.tableView.reloadData()
+        return true
+    }
+}

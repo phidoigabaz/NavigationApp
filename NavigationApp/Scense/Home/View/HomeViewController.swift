@@ -21,9 +21,11 @@ import Mapbox
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!
     
-    var homeCateogry: [HomeCategory] = []
-    
+    var baseDataModel = BaseDataModel()
+    let settingService = SettingService()
     var sizingCell: HomeItemCollectionViewCell? = nil
+    var placeNearView = PlaceNearView()
+    var presenter: HomePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +46,7 @@ import Mapbox
         currentLocationView.setRadiusView(currentLocationView.frame.size.height/2)
         whereGoLabel.text = "Where are you going \ntoday?"
         timeStandLabel.text = timeStandLabel.text?.getDateTimeCurrent()
-        homeCateogry = [HomeCategory("Saved places", UIImage(named: "valentines-heart")),
-                        HomeCategory("Work", UIImage(named: "work")),
-                        HomeCategory("Home", UIImage(named: "home-button")),
-                        HomeCategory("Plan", UIImage(named: "plan"))]
+        baseDataModel.parseData()
         collectionView.register(UINib(nibName: HomeItemCollectionViewCell.nibName(), bundle: nil),
                                 forCellWithReuseIdentifier: HomeItemCollectionViewCell.nibName())
         DispatchQueue.main.async {
@@ -57,6 +56,33 @@ import Mapbox
 //                                                                       height: self.collectionView.bounds.size.height),
 //                                                         colors: [.clear, .white])
             self.collectionView.reloadData()
+        }
+    }
+    
+    func loadNib() -> PlaceNearView {
+        let infoWindow = PlaceNearView.instanceFromNib()
+        return infoWindow
+    }
+    
+    func pushPlaceNearView() {
+        bottomView.removeFromSuperview()
+        placeNearView.removeFromSuperview()
+        placeNearView = loadNib()
+        placeNearView.backgroundColor = .clear
+        //placeNearView.delegate = self
+        placeNearView.frame = CGRect(x: 0, y: self.view.frame.size.height - 200, width: placeNearView.frame.size.width, height: 200)
+        self.view.addSubview(placeNearView)
+    }
+    
+    func getData() {
+        if mapView.showsUserLocation {
+            if let userLocation = mapView.userLocation?.coordinate {
+                settingService.getPlaceNearYou(lat: userLocation.latitude, lng: userLocation.longitude) { (err) in
+                    if err == nil {
+                        print("success")
+                    }
+                }
+            }
         }
     }
     
@@ -85,29 +111,24 @@ extension HomeViewController: MGLMapViewDelegate {
 //
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeCateogry.count
+        return baseDataModel.sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeItemCollectionViewCell.nibName(),
                                                       for: indexPath) as! HomeItemCollectionViewCell
-        cell.titleLabel.text = homeCateogry[indexPath.row].title
-        cell.thumbaiImageView.image = homeCateogry[indexPath.row].image
+        cell.titleLabel.text = baseDataModel.sections[indexPath.row].title
+        cell.thumbaiImageView.image = baseDataModel.sections[indexPath.row].image
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("indexPath: \(indexPath.row)")
-        bottomView.removeFromSuperview()
+        switch indexPath.row {
+        case 0:
+            pushPlaceNearView()
+        default:
+            break
+        }
     }
 }
 
-struct HomeCategory {
-    var title: String
-    var image: UIImage?
-    
-    init(_ title: String,_ image: UIImage?) {
-        self.title = title
-        self.image = image
-    }
-}

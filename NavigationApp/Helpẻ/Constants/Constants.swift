@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 struct Constants {
-    
+    static let MAPBOX_ACESS_TOKEN = "pk.eyJ1IjoicGhpZG9pZ2FiYXoiLCJhIjoiY2p1ZGhmbXo0MGVseDRlcjF3bG1ndWZ3OCJ9.HYgvGCXqshnQKi4lW8xfkQ"
+    static let latDefault = ""
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let isIpad = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     static let iPhone = "iPhone"
