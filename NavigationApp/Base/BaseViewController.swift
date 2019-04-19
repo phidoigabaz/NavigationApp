@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Mapbox
 
 class BaseViewController: UIViewController {
-
+    @IBOutlet weak var mapView: MGLMapView!
+    var baseDataModel = BaseDataModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -23,6 +26,14 @@ class BaseViewController: UIViewController {
         
     }
     
+    func setupMapView() {
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationItem.hidesBackButton = true
+        mapView.styleURL = MGLStyle.lightStyleURL
+        mapView.logoView.isHidden = true
+        mapView.attributionButton.isHidden = true
+    }
+    
     @objc func menuButtonBarItem() {
         print("menu")
         //mm_drawerController.toggle(.left, animated: true, completion: nil)
@@ -34,7 +45,7 @@ class BaseViewController: UIViewController {
     
     @objc func skipBarItemAction() {
         print("skip")
-        let homeVC = HomeViewController.initWithDefaultNib()
+        let homeVC = HomeRouter.createView()
         navigationController?.pushViewController(homeVC, animated: true)
     }
 }

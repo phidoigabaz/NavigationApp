@@ -20,9 +20,9 @@ class PlaceNearView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
        titleLabel.text = "Saved places \nnear you"
-       containerView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth,
-                                                             height: containerView.bounds.height),
-                                                             colors: [.clear, .white])
+//       containerView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth,
+//                                                             height: containerView.bounds.height),
+//                                                             colors: [.clear, .white])
     }
     
     @IBAction func onBackAction(_ sender: Any) {

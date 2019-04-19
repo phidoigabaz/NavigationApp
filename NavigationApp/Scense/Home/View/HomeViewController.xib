@@ -16,7 +16,7 @@
                 <outlet property="collectionLayout" destination="D2W-3t-p64" id="A8k-zY-arZ"/>
                 <outlet property="collectionView" destination="f7o-8x-kIT" id="wbG-Ie-Hs9"/>
                 <outlet property="currentLocationView" destination="7T9-Qy-zzs" id="TUC-pm-qWo"/>
-                <outlet property="mapView" destination="ipV-Um-Mqx" id="9LM-Ku-27o"/>
+                <outlet property="mapView" destination="ipV-Um-Mqx" id="xpr-zH-jQd"/>
                 <outlet property="menuView" destination="1jc-T6-WD1" id="cgz-HP-DkS"/>
                 <outlet property="timeStandLabel" destination="QQE-ZS-RPT" id="Jrd-Xn-8jf"/>
                 <outlet property="topView" destination="2Fg-dO-AGg" id="evl-sz-VQ8"/>
@@ -98,11 +98,21 @@
                                 <constraint firstAttribute="width" constant="16" id="DNN-lu-53N"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVL-Jx-Are">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <connections>
+                                <action selector="onMenuAction:" destination="-1" eventType="touchUpInside" id="3fq-jn-w1X"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.89364367723464966" green="0.89434951543807983" blue="0.88682812452316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="GQK-M3-oCi" firstAttribute="centerY" secondItem="1jc-T6-WD1" secondAttribute="centerY" id="Kwu-c2-D7e"/>
+                        <constraint firstItem="tVL-Jx-Are" firstAttribute="leading" secondItem="1jc-T6-WD1" secondAttribute="leading" id="WBP-Zy-EeK"/>
+                        <constraint firstAttribute="trailing" secondItem="tVL-Jx-Are" secondAttribute="trailing" id="iXO-Y8-Mga"/>
+                        <constraint firstItem="tVL-Jx-Are" firstAttribute="top" secondItem="1jc-T6-WD1" secondAttribute="top" id="iqs-l3-N19"/>
                         <constraint firstAttribute="height" constant="50" id="jdO-Ng-EJY"/>
+                        <constraint firstAttribute="bottom" secondItem="tVL-Jx-Are" secondAttribute="bottom" id="tdc-WR-76F"/>
                         <constraint firstAttribute="width" constant="50" id="vcW-zt-aSV"/>
                         <constraint firstItem="GQK-M3-oCi" firstAttribute="centerX" secondItem="1jc-T6-WD1" secondAttribute="centerX" id="zie-FE-XgQ"/>
                     </constraints>

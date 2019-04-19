@@ -56,7 +56,7 @@
                                         <action selector="onClearTextAction:" destination="-1" eventType="touchUpInside" id="SpF-hg-O5w"/>
                                     </connections>
                                 </button>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-8H-5KS">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-8H-5KS">
                                     <rect key="frame" x="40" y="11.5" width="263" height="17"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -69,10 +69,10 @@
                                 <constraint firstItem="fL6-yO-OiD" firstAttribute="leading" secondItem="lVJ-08-Zc9" secondAttribute="leading" constant="16" id="7mE-vy-kzf"/>
                                 <constraint firstAttribute="height" constant="40" id="ErS-GI-9d8"/>
                                 <constraint firstAttribute="trailing" secondItem="EW7-Ts-CTV" secondAttribute="trailing" constant="16" id="Tfl-BK-WDo"/>
-                                <constraint firstItem="zDi-8H-5KS" firstAttribute="centerY" secondItem="lVJ-08-Zc9" secondAttribute="centerY" id="Tnw-qw-AhQ"/>
-                                <constraint firstItem="EW7-Ts-CTV" firstAttribute="leading" secondItem="zDi-8H-5KS" secondAttribute="trailing" constant="8" id="U1G-OO-RIM"/>
                                 <constraint firstItem="EW7-Ts-CTV" firstAttribute="centerY" secondItem="lVJ-08-Zc9" secondAttribute="centerY" id="USk-a5-OTk"/>
-                                <constraint firstItem="zDi-8H-5KS" firstAttribute="leading" secondItem="fL6-yO-OiD" secondAttribute="trailing" constant="8" id="vDr-BD-LXT"/>
+                                <constraint firstItem="zDi-8H-5KS" firstAttribute="leading" secondItem="fL6-yO-OiD" secondAttribute="trailing" constant="8" id="WFh-Vi-hJi"/>
+                                <constraint firstItem="zDi-8H-5KS" firstAttribute="centerY" secondItem="fL6-yO-OiD" secondAttribute="centerY" id="ae2-1P-Q4j"/>
+                                <constraint firstItem="EW7-Ts-CTV" firstAttribute="leading" secondItem="zDi-8H-5KS" secondAttribute="trailing" constant="8" id="uQ1-la-M1Z"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

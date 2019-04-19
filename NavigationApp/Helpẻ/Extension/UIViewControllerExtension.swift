@@ -58,4 +58,23 @@ extension UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
         return controller
     }
+    
+    func showAlert(title: String?, message: String?, completeHanle : ((() -> Swift.Void)?)) {
+        
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel)
+        
+        let dismissAction = UIAlertAction(title: "Settings", style: UIAlertAction.Style.default) { (_) in
+            if completeHanle != nil {
+                completeHanle!()
+            }
+        }
+        alertView.addAction(cancelAction)
+        alertView.addAction(dismissAction)
+        
+        let viewController = UIApplication.shared.windows.first?.rootViewController
+        DispatchQueue.main.async {
+            viewController!.present(alertView, animated: true, completion: nil)
+        }
+    }
 }

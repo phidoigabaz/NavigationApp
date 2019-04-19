@@ -36,17 +36,40 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fj6-2U-DsG">
+                            <rect key="frame" x="16" y="107.5" width="343" height="173.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KiI-ZR-O1S">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're now in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhT-Ly-Wrg">
+                            <rect key="frame" x="16" y="78" width="343" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="EhT-Ly-Wrg" firstAttribute="leading" secondItem="p1l-XC-Txl" secondAttribute="leading" constant="16" id="01o-x1-4uY"/>
                         <constraint firstItem="g0U-V4-ahb" firstAttribute="top" secondItem="p1l-XC-Txl" secondAttribute="top" id="DZB-hP-lG5"/>
                         <constraint firstAttribute="width" secondItem="p1l-XC-Txl" secondAttribute="height" multiplier="4:3" id="NPP-AR-bQb"/>
                         <constraint firstItem="g0U-V4-ahb" firstAttribute="leading" secondItem="p1l-XC-Txl" secondAttribute="leading" constant="16" id="S7P-LL-Uzn"/>
+                        <constraint firstItem="EhT-Ly-Wrg" firstAttribute="top" secondItem="ogm-1C-A4U" secondAttribute="bottom" constant="8" id="TM0-2a-KeL"/>
                         <constraint firstItem="ogm-1C-A4U" firstAttribute="leading" secondItem="p1l-XC-Txl" secondAttribute="leading" constant="16" id="Ya1-KV-ZsA"/>
+                        <constraint firstItem="fj6-2U-DsG" firstAttribute="leading" secondItem="p1l-XC-Txl" secondAttribute="leading" constant="16" id="cfi-Vm-nkM"/>
                         <constraint firstItem="ogm-1C-A4U" firstAttribute="top" secondItem="g0U-V4-ahb" secondAttribute="bottom" constant="16" id="dWe-HW-igq"/>
+                        <constraint firstAttribute="trailing" secondItem="EhT-Ly-Wrg" secondAttribute="trailing" constant="16" id="pPl-SO-nQd"/>
+                        <constraint firstAttribute="trailing" secondItem="fj6-2U-DsG" secondAttribute="trailing" constant="16" id="q6s-MI-JCM"/>
+                        <constraint firstAttribute="bottom" secondItem="fj6-2U-DsG" secondAttribute="bottom" id="rlx-4r-hiY"/>
+                        <constraint firstItem="fj6-2U-DsG" firstAttribute="top" secondItem="EhT-Ly-Wrg" secondAttribute="bottom" constant="10" id="wJT-ga-I21"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="p1l-XC-Txl" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="3ub-YR-ljx"/>
                 <constraint firstItem="p1l-XC-Txl" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="RWf-Nu-U4J"/>

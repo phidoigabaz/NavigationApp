@@ -16,7 +16,9 @@ let kClientOSHeaderField = "os_type"
 
 
 let baseURL = "https://api.mapbox.com/geocoding" //-> mopbox URL
+let baseURL_Google = "https://maps.googleapis.com/maps/api" // -> google map URL
 let apiVersion = "/v5"
+let apiVersion_Google = "/place"
 
 /*
  *  APIRequestProvider takes responsible for build and provide request for service objects
@@ -41,7 +43,6 @@ class APIRequestProvider: NSObject {
                 "Authorization": "",
                 "Accept": "application/json",
                 "Content-Type": "application/x-www-form-urlencoded",
-                //"access_token": Constants.MAPBOX_ACESS_TOKEN
             ]
 
             return headers
@@ -75,6 +76,7 @@ class APIRequestProvider: NSObject {
         return param
     }
     
+    //Mapbox
     private var _requestURL: String = baseURL
     var requestURL: String {
         set {
@@ -83,6 +85,19 @@ class APIRequestProvider: NSObject {
         get {
             var url = _requestURL
             url.append("\(apiVersion)/")
+            return url
+        }
+    }
+    
+    //GOOGLE MAP
+    private var _requestURL_Google: String = baseURL_Google
+    var requestURL_Google: String {
+        set {
+            _requestURL_Google = requestURL_Google
+        }
+        get {
+            var url = _requestURL_Google
+            url.append("\(apiVersion_Google)/")
             return url
         }
     }
@@ -113,6 +128,21 @@ class APIRequestProvider: NSObject {
         let urlString = requestURL.appending("mapbox.places/\(searchText).json")
         var param = commonParam()
         param["access_token"] = Constants.MAPBOX_ACESS_TOKEN
+        return alamoFireManager.request(urlString,
+                                        method: .get,
+                                        parameters: param,
+                                        encoding: URLEncoding.queryString,
+                                        headers: nil)
+    }
+    
+    
+    //Google map
+    func getNearBySearch(lat: CLLocationDegrees,lng: CLLocationDegrees,radius: Int) -> DataRequest {
+        let urlString = requestURL.appending("mapbox.places/\(lat),\(lng).json")
+        var param = commonParam()
+        param["access_token"] = Constants.MAPBOX_ACESS_TOKEN
+        //param["radius"] = String(15000)
+        //param["sensor"] = "true"
         return alamoFireManager.request(urlString,
                                         method: .get,
                                         parameters: param,

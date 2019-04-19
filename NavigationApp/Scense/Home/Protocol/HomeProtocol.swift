@@ -7,25 +7,30 @@
 //
 
 import Foundation
+import Mapbox
 
 protocol HomeViewToPresenterProtocol: class {
     var view: PresenterToHomeViewProtocol? {get set}
     var interactor: HomePresenterToInteractorProtocol? {get set}
     var router: HomePresenterToRouterProtocol? {get set}
+    func getDataSuccess(_ lat: CLLocationDegrees,_ lng: CLLocationDegrees,_ radius: Int)
+    func getDataFailed()
 }
 
 protocol PresenterToHomeViewProtocol: class {
-    
+    func showData(_ list: [NearByModel])
 }
 
 protocol HomePresenterToInteractorProtocol: class {
-    var presenter: HomePresenterToInteractorProtocol? {get set}
+    var presenter: InteractorToPresenterProtocol? {get set}
+    func getData(_ lat: CLLocationDegrees,_ lng: CLLocationDegrees,radius: Int)
 }
 
 protocol HomePresenterToRouterProtocol: class {
-    var view: HomeViewToPresenterProtocol? {get set}
+    static func createView() -> HomeViewController
 }
 
 protocol InteractorToPresenterProtocol: class {
-    func getPlaceNearYou()
+    func DataSuccess(_ list: [NearByModel])
+    func DataFailed(_ err: NSError)
 }

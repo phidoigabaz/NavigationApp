@@ -55,4 +55,12 @@ extension UIView {
         self.layer.shadowOpacity = 0.15
         self.layer.shadowPath = shadowPath.cgPath
     }
+    
+    func animateTrasitionToRight(_ placeNearView: UIView) {
+        let transition = CATransition()
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        placeNearView.layer.add(transition, forKey: nil)
+        self.addSubview(placeNearView)
+    }
 }

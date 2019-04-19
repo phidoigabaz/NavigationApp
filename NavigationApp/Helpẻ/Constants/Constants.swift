@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 
 struct Constants {
+    
     static let MAPBOX_ACESS_TOKEN = "pk.eyJ1IjoicGhpZG9pZ2FiYXoiLCJhIjoiY2p1ZGhmbXo0MGVseDRlcjF3bG1ndWZ3OCJ9.HYgvGCXqshnQKi4lW8xfkQ"
+    static let GOOGLE_API_KEY = "AIzaSyAyp1YZg93UoA1jTGSiL_3-r3ZLd3GTsdg"
+    
     static let latDefault = ""
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let isIpad = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
@@ -22,6 +25,8 @@ struct Constants {
     static let cardWidth: CGFloat = 122
     
     static let kUserDefault = "kUserdefault"
+    
+    static let photoUrl = "https://maps.googleapis.com/maps/api/place/photo?"
 }
 
 //C8C9CB -> search

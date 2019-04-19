@@ -20,6 +20,19 @@
 		B640C52B2266FB9F00F08BBE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640C52A2266FB9F00F08BBE /* HomeRouter.swift */; };
 		B640C52D2266FBA900F08BBE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640C52C2266FBA900F08BBE /* HomeInteractor.swift */; };
 		B640C52F2266FBB200F08BBE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640C52E2266FBB200F08BBE /* HomePresenter.swift */; };
+		B648DC322268249B007A4885 /* NearByDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC312268249B007A4885 /* NearByDTO.swift */; };
+		B648DC34226824A6007A4885 /* NearByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC33226824A6007A4885 /* NearByModel.swift */; };
+		B648DC3822687883007A4885 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC3622687883007A4885 /* RouteViewController.swift */; };
+		B648DC3922687883007A4885 /* RouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648DC3722687883007A4885 /* RouteViewController.xib */; };
+		B648DC3D22687938007A4885 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC3B22687938007A4885 /* MenuViewController.swift */; };
+		B648DC3E22687938007A4885 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648DC3C22687938007A4885 /* MenuViewController.xib */; };
+		B648DC422268801A007A4885 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC402268801A007A4885 /* MenuItemTableViewCell.swift */; };
+		B648DC432268801A007A4885 /* MenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648DC412268801A007A4885 /* MenuItemTableViewCell.xib */; };
+		B648DC4622688035007A4885 /* MenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC4422688035007A4885 /* MenuHeaderTableViewCell.swift */; };
+		B648DC4722688035007A4885 /* MenuHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648DC4522688035007A4885 /* MenuHeaderTableViewCell.xib */; };
+		B648DC49226888CB007A4885 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC48226888CB007A4885 /* BaseTableViewCell.swift */; };
+		B648DC4C22688AB2007A4885 /* MenuSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648DC4A22688AB2007A4885 /* MenuSetupTableViewCell.swift */; };
+		B648DC4D22688AB2007A4885 /* MenuSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648DC4B22688AB2007A4885 /* MenuSetupTableViewCell.xib */; };
 		B6943548226032580087F5E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6943546226032580087F5E3 /* HomeViewController.swift */; };
 		B6943549226032580087F5E3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6943547226032580087F5E3 /* HomeViewController.xib */; };
 		B694354B226036290087F5E3 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B694354A226036290087F5E3 /* Mapbox.framework */; };
@@ -38,6 +51,20 @@
 		B6A204602265D68A006C58D3 /* CategoryItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A2045E2265D68A006C58D3 /* CategoryItemTableViewCell.xib */; };
 		B6A204632265EF4F006C58D3 /* SearchResultListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A204622265EF4F006C58D3 /* SearchResultListHeaderView.swift */; };
 		B6A204652265EF56006C58D3 /* SearchResultListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A204642265EF56006C58D3 /* SearchResultListHeaderView.xib */; };
+		B6F2255C22697015006D316E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2255B22697015006D316E /* Protocols.swift */; };
+		B6F2255E2269701D006D316E /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2255D2269701D006D316E /* HeaderModel.swift */; };
+		B6F2256022697092006D316E /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2255F22697092006D316E /* SectionModel.swift */; };
+		B6F22562226971CA006D316E /* BaseHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F22561226971CA006D316E /* BaseHeaderTableView.swift */; };
+		B6F22564226971DE006D316E /* BaseHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F22563226971DE006D316E /* BaseHeaderTableView.xib */; };
+		B6F2256822697420006D316E /* BaseItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2256622697420006D316E /* BaseItemCollectionViewCell.swift */; };
+		B6F2256922697420006D316E /* BaseItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F2256722697420006D316E /* BaseItemCollectionViewCell.xib */; };
+		B6F2256D22697789006D316E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2256B22697789006D316E /* SettingsViewController.swift */; };
+		B6F2256E22697789006D316E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F2256C22697789006D316E /* SettingsViewController.xib */; };
+		B6F225712269A73D006D316E /* UITableViewHeaderFooterViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F225702269A73D006D316E /* UITableViewHeaderFooterViewExtension.swift */; };
+		B6F225742269C810006D316E /* SettingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F225722269C810006D316E /* SettingItemTableViewCell.swift */; };
+		B6F225752269C810006D316E /* SettingItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F225732269C810006D316E /* SettingItemTableViewCell.xib */; };
+		B6F225782269D73F006D316E /* MapStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F225762269D73F006D316E /* MapStyleTableViewCell.swift */; };
+		B6F225792269D73F006D316E /* MapStyleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F225772269D73F006D316E /* MapStyleTableViewCell.xib */; };
 		B6F5CCAC22671C440052AF59 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5CCAB22671C440052AF59 /* BaseViewModel.swift */; };
 		B6F5CCAE226724080052AF59 /* BaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5CCAD226724080052AF59 /* BaseDataModel.swift */; };
 		B6F5CCB022672A3C0052AF59 /* SearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5CCAF22672A3C0052AF59 /* SearchDTO.swift */; };
@@ -103,6 +130,19 @@
 		B640C52A2266FB9F00F08BBE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		B640C52C2266FBA900F08BBE /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		B640C52E2266FBB200F08BBE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		B648DC312268249B007A4885 /* NearByDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByDTO.swift; sourceTree = "<group>"; };
+		B648DC33226824A6007A4885 /* NearByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByModel.swift; sourceTree = "<group>"; };
+		B648DC3622687883007A4885 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		B648DC3722687883007A4885 /* RouteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteViewController.xib; sourceTree = "<group>"; };
+		B648DC3B22687938007A4885 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B648DC3C22687938007A4885 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		B648DC402268801A007A4885 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		B648DC412268801A007A4885 /* MenuItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemTableViewCell.xib; sourceTree = "<group>"; };
+		B648DC4422688035007A4885 /* MenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		B648DC4522688035007A4885 /* MenuHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		B648DC48226888CB007A4885 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		B648DC4A22688AB2007A4885 /* MenuSetupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSetupTableViewCell.swift; sourceTree = "<group>"; };
+		B648DC4B22688AB2007A4885 /* MenuSetupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuSetupTableViewCell.xib; sourceTree = "<group>"; };
 		B6943546226032580087F5E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B6943547226032580087F5E3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B694354A226036290087F5E3 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
@@ -121,6 +161,20 @@
 		B6A2045E2265D68A006C58D3 /* CategoryItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemTableViewCell.xib; sourceTree = "<group>"; };
 		B6A204622265EF4F006C58D3 /* SearchResultListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultListHeaderView.swift; sourceTree = "<group>"; };
 		B6A204642265EF56006C58D3 /* SearchResultListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultListHeaderView.xib; sourceTree = "<group>"; };
+		B6F2255B22697015006D316E /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B6F2255D2269701D006D316E /* HeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
+		B6F2255F22697092006D316E /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		B6F22561226971CA006D316E /* BaseHeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHeaderTableView.swift; sourceTree = "<group>"; };
+		B6F22563226971DE006D316E /* BaseHeaderTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseHeaderTableView.xib; sourceTree = "<group>"; };
+		B6F2256622697420006D316E /* BaseItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		B6F2256722697420006D316E /* BaseItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		B6F2256B22697789006D316E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B6F2256C22697789006D316E /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		B6F225702269A73D006D316E /* UITableViewHeaderFooterViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtension.swift; sourceTree = "<group>"; };
+		B6F225722269C810006D316E /* SettingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemTableViewCell.swift; sourceTree = "<group>"; };
+		B6F225732269C810006D316E /* SettingItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingItemTableViewCell.xib; sourceTree = "<group>"; };
+		B6F225762269D73F006D316E /* MapStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyleTableViewCell.swift; sourceTree = "<group>"; };
+		B6F225772269D73F006D316E /* MapStyleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapStyleTableViewCell.xib; sourceTree = "<group>"; };
 		B6F5CCAB22671C440052AF59 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B6F5CCAD226724080052AF59 /* BaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataModel.swift; sourceTree = "<group>"; };
 		B6F5CCAF22672A3C0052AF59 /* SearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDTO.swift; sourceTree = "<group>"; };
@@ -179,6 +233,7 @@
 				0B0D170F71CD40A6FE703E49 /* Pods_NavigationApp.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		38CF1621AC4C24D0B454F8EE /* Pods */ = {
@@ -215,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				B6F5CCB122672B5A0052AF59 /* SearchModel.swift */,
+				B648DC33226824A6007A4885 /* NearByModel.swift */,
 			);
 			path = BusinessModel;
 			sourceTree = "<group>";
@@ -223,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				B6F5CCAF22672A3C0052AF59 /* SearchDTO.swift */,
+				B648DC312268249B007A4885 /* NearByDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -275,6 +332,50 @@
 				B640C52E2266FBB200F08BBE /* HomePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B648DC3522687572007A4885 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				B648DC3622687883007A4885 /* RouteViewController.swift */,
+				B648DC3722687883007A4885 /* RouteViewController.xib */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		B648DC3A2268792D007A4885 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B648DC3F22688009007A4885 /* CustomView */,
+				B648DC3B22687938007A4885 /* MenuViewController.swift */,
+				B648DC3C22687938007A4885 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B648DC3F22688009007A4885 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B648DC402268801A007A4885 /* MenuItemTableViewCell.swift */,
+				B648DC412268801A007A4885 /* MenuItemTableViewCell.xib */,
+				B648DC4422688035007A4885 /* MenuHeaderTableViewCell.swift */,
+				B648DC4522688035007A4885 /* MenuHeaderTableViewCell.xib */,
+				B648DC4A22688AB2007A4885 /* MenuSetupTableViewCell.swift */,
+				B648DC4B22688AB2007A4885 /* MenuSetupTableViewCell.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		B648DC4E22688BD1007A4885 /* BaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6F5CCAB22671C440052AF59 /* BaseViewModel.swift */,
+				B6F5CCAD226724080052AF59 /* BaseDataModel.swift */,
+				B6F2255B22697015006D316E /* Protocols.swift */,
+				B6F2255D2269701D006D316E /* HeaderModel.swift */,
+				B6F2255F22697092006D316E /* SectionModel.swift */,
+			);
+			path = BaseViewModel;
 			sourceTree = "<group>";
 		};
 		B69435452260324B0087F5E3 /* Home */ = {
@@ -383,6 +484,10 @@
 				B6A2045D2265D68A006C58D3 /* CategoryItemTableViewCell.swift */,
 				B640C51D2266D97B00F08BBE /* PlaceNearView.xib */,
 				B640C51F2266D98B00F08BBE /* PlaceNearView.swift */,
+				B6F22563226971DE006D316E /* BaseHeaderTableView.xib */,
+				B6F22561226971CA006D316E /* BaseHeaderTableView.swift */,
+				B6F2256722697420006D316E /* BaseItemCollectionViewCell.xib */,
+				B6F2256622697420006D316E /* BaseItemCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,11 +499,30 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		B6F2256A2269774C006D316E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B6F2256F22699D32006D316E /* CustomView */,
+				B6F2256B22697789006D316E /* SettingsViewController.swift */,
+				B6F2256C22697789006D316E /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B6F2256F22699D32006D316E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B6F225722269C810006D316E /* SettingItemTableViewCell.swift */,
+				B6F225732269C810006D316E /* SettingItemTableViewCell.xib */,
+				B6F225762269D73F006D316E /* MapStyleTableViewCell.swift */,
+				B6F225772269D73F006D316E /* MapStyleTableViewCell.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		B6F5CCAA22671C340052AF59 /* HomeViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B6F5CCAB22671C440052AF59 /* BaseViewModel.swift */,
-				B6F5CCAD226724080052AF59 /* BaseDataModel.swift */,
 			);
 			path = HomeViewModel;
 			sourceTree = "<group>";
@@ -410,7 +534,6 @@
 				B6FCF055225F2BDB00AE23E9 /* NavigationApp */,
 				B6FCF054225F2BDB00AE23E9 /* Products */,
 				38CF1621AC4C24D0B454F8EE /* Pods */,
-				31FB758AA57DD63426443EB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -432,10 +555,11 @@
 				B6FCF068225F2C1E00AE23E9 /* Base */,
 				B6FCF056225F2BDB00AE23E9 /* AppDelegate.swift */,
 				B6FCF058225F2BDB00AE23E9 /* ViewController.swift */,
+				B6FCF062225F2BDC00AE23E9 /* Info.plist */,
 				B6FCF05A225F2BDB00AE23E9 /* Main.storyboard */,
 				B6FCF05D225F2BDC00AE23E9 /* Assets.xcassets */,
 				B6FCF05F225F2BDC00AE23E9 /* LaunchScreen.storyboard */,
-				B6FCF062225F2BDC00AE23E9 /* Info.plist */,
+				31FB758AA57DD63426443EB7 /* Frameworks */,
 			);
 			path = NavigationApp;
 			sourceTree = "<group>";
@@ -443,9 +567,11 @@
 		B6FCF068225F2C1E00AE23E9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B648DC4E22688BD1007A4885 /* BaseViewModel */,
 				B6A204542265B844006C58D3 /* View */,
 				B6FCF08E225F3C5300AE23E9 /* BaseViewController.swift */,
 				B6FCF08C225F3C3B00AE23E9 /* BaseNavigationController.swift */,
+				B648DC48226888CB007A4885 /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -464,6 +590,9 @@
 		B6FCF06A225F2C3400AE23E9 /* Scense */ = {
 			isa = PBXGroup;
 			children = (
+				B6F2256A2269774C006D316E /* Settings */,
+				B648DC3A2268792D007A4885 /* Menu */,
+				B648DC3522687572007A4885 /* Route */,
 				B6A204612265D988006C58D3 /* Profile */,
 				B6A204442265AAC5006C58D3 /* Search */,
 				B69435452260324B0087F5E3 /* Home */,
@@ -515,6 +644,7 @@
 				B6FCF07A225F3AF600AE23E9 /* UINotificationExtension.swift */,
 				B6FCF07B225F3AF600AE23E9 /* UITableViewCellExtension.swift */,
 				B6FCF094225F443700AE23E9 /* UIViewExtension.swift */,
+				B6F225702269A73D006D316E /* UITableViewHeaderFooterViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -601,10 +731,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A2045C2265B9FB006C58D3 /* SearchPagingViewController.xib in Resources */,
+				B648DC4722688035007A4885 /* MenuHeaderTableViewCell.xib in Resources */,
 				B6F5CCBA226738D40052AF59 /* FilterTableViewCell.xib in Resources */,
 				B6FCF061225F2BDC00AE23E9 /* LaunchScreen.storyboard in Resources */,
 				B6A204652265EF56006C58D3 /* SearchResultListHeaderView.xib in Resources */,
 				B640C51E2266D97B00F08BBE /* PlaceNearView.xib in Resources */,
+				B6F225752269C810006D316E /* SettingItemTableViewCell.xib in Resources */,
+				B648DC3922687883007A4885 /* RouteViewController.xib in Resources */,
 				B6FCF075225F372B00AE23E9 /* IntroItemTableViewCell.xib in Resources */,
 				B6FCF05E225F2BDC00AE23E9 /* Assets.xcassets in Resources */,
 				B6FCF05C225F2BDB00AE23E9 /* Main.storyboard in Resources */,
@@ -612,10 +745,17 @@
 				B6A204522265AC9B006C58D3 /* SearchViewController.xib in Resources */,
 				B6A204562265B86C006C58D3 /* ItemMenuView.xib in Resources */,
 				B6943549226032580087F5E3 /* HomeViewController.xib in Resources */,
+				B648DC432268801A007A4885 /* MenuItemTableViewCell.xib in Resources */,
+				B648DC3E22687938007A4885 /* MenuViewController.xib in Resources */,
+				B6F2256922697420006D316E /* BaseItemCollectionViewCell.xib in Resources */,
 				B694355322606EAB0087F5E3 /* HomeItemCollectionViewCell.xib in Resources */,
+				B6F22564226971DE006D316E /* BaseHeaderTableView.xib in Resources */,
+				B6F2256E22697789006D316E /* SettingsViewController.xib in Resources */,
 				B6A204602265D68A006C58D3 /* CategoryItemTableViewCell.xib in Resources */,
 				B6F5CCB622672FA20052AF59 /* SearchItemPlaceTableViewCell.xib in Resources */,
 				B6FCF09A225F47CB00AE23E9 /* DownloadMapOfflineViewController.xib in Resources */,
+				B6F225792269D73F006D316E /* MapStyleTableViewCell.xib in Resources */,
+				B648DC4D22688AB2007A4885 /* MenuSetupTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,47 +848,64 @@
 				B640C5142266C34700F08BBE /* APIRequestProvider.swift in Sources */,
 				B6F5CCB522672FA20052AF59 /* SearchItemPlaceTableViewCell.swift in Sources */,
 				B6A2045B2265B9FB006C58D3 /* SearchPagingViewController.swift in Sources */,
+				B6F225712269A73D006D316E /* UITableViewHeaderFooterViewExtension.swift in Sources */,
 				B6A2045F2265D68A006C58D3 /* CategoryItemTableViewCell.swift in Sources */,
 				B694355A22609E060087F5E3 /* FlowLayout.swift in Sources */,
 				B6FCF099225F47CB00AE23E9 /* DownloadMapOfflineViewController.swift in Sources */,
 				B6FCF085225F3AF600AE23E9 /* UIImageViewExtension.swift in Sources */,
 				B6A204632265EF4F006C58D3 /* SearchResultListHeaderView.swift in Sources */,
+				B6F22562226971CA006D316E /* BaseHeaderTableView.swift in Sources */,
 				B640C5202266D98B00F08BBE /* PlaceNearView.swift in Sources */,
 				B6FCF087225F3AF600AE23E9 /* UIColor.swift in Sources */,
 				B6FCF082225F3AF600AE23E9 /* UINotificationExtension.swift in Sources */,
 				B6943548226032580087F5E3 /* HomeViewController.swift in Sources */,
+				B648DC3822687883007A4885 /* RouteViewController.swift in Sources */,
 				B6FCF06F225F2C8D00AE23E9 /* IntroViewController.swift in Sources */,
 				B6FCF074225F372B00AE23E9 /* IntroItemTableViewCell.swift in Sources */,
 				B640C5222266DF2B00F08BBE /* Enum.swift in Sources */,
+				B6F225742269C810006D316E /* SettingItemTableViewCell.swift in Sources */,
 				B6FCF078225F3AE800AE23E9 /* UIViewControllerExtension.swift in Sources */,
 				B6F5CCB022672A3C0052AF59 /* SearchDTO.swift in Sources */,
 				B6FCF059225F2BDB00AE23E9 /* ViewController.swift in Sources */,
+				B648DC49226888CB007A4885 /* BaseTableViewCell.swift in Sources */,
 				B6FCF084225F3AF600AE23E9 /* UIColorExtension.swift in Sources */,
+				B6F2256D22697789006D316E /* SettingsViewController.swift in Sources */,
+				B6F2256822697420006D316E /* BaseItemCollectionViewCell.swift in Sources */,
+				B6F2255E2269701D006D316E /* HeaderModel.swift in Sources */,
 				B640C5152266C34700F08BBE /* APIServiceAgent.swift in Sources */,
 				B6FCF08D225F3C3B00AE23E9 /* BaseNavigationController.swift in Sources */,
 				B640C51C2266C86E00F08BBE /* LocationManager.swift in Sources */,
+				B6F2256022697092006D316E /* SectionModel.swift in Sources */,
+				B6F2255C22697015006D316E /* Protocols.swift in Sources */,
 				B6F5CCB9226738D40052AF59 /* FilterTableViewCell.swift in Sources */,
 				B694355222606EAB0087F5E3 /* HomeItemCollectionViewCell.swift in Sources */,
 				B6F5CCAC22671C440052AF59 /* BaseViewModel.swift in Sources */,
 				B6A204432265808A006C58D3 /* DynamicHeightCalculable.swift in Sources */,
 				B640C52F2266FBB200F08BBE /* HomePresenter.swift in Sources */,
 				B640C52B2266FB9F00F08BBE /* HomeRouter.swift in Sources */,
+				B648DC422268801A007A4885 /* MenuItemTableViewCell.swift in Sources */,
 				B6A204512265AC9B006C58D3 /* SearchViewController.swift in Sources */,
 				B6FCF057225F2BDB00AE23E9 /* AppDelegate.swift in Sources */,
 				B6F5CCAE226724080052AF59 /* BaseDataModel.swift in Sources */,
 				B6FCF093225F400200AE23E9 /* UIButtomCustomExtension.swift in Sources */,
 				B6FCF088225F3AF600AE23E9 /* UICollectionViewCellExtension.swift in Sources */,
 				B6FCF095225F443700AE23E9 /* UIViewExtension.swift in Sources */,
+				B648DC4C22688AB2007A4885 /* MenuSetupTableViewCell.swift in Sources */,
+				B6F225782269D73F006D316E /* MapStyleTableViewCell.swift in Sources */,
 				B640C5132266C34700F08BBE /* SettingServices.swift in Sources */,
 				B640C5122266C34700F08BBE /* APIServiceObject.swift in Sources */,
 				B6FCF081225F3AF600AE23E9 /* UICustomViewExtension.swift in Sources */,
 				B6FCF08B225F3B6700AE23E9 /* Constants.swift in Sources */,
+				B648DC4622688035007A4885 /* MenuHeaderTableViewCell.swift in Sources */,
 				B640C52D2266FBA900F08BBE /* HomeInteractor.swift in Sources */,
+				B648DC3D22687938007A4885 /* MenuViewController.swift in Sources */,
+				B648DC322268249B007A4885 /* NearByDTO.swift in Sources */,
 				B6A204582265B87F006C58D3 /* ItemMenuView.swift in Sources */,
 				B6F5CCB222672B5A0052AF59 /* SearchModel.swift in Sources */,
 				B6FCF08F225F3C5300AE23E9 /* BaseViewController.swift in Sources */,
 				B6FCF086225F3AF600AE23E9 /* StringExtension.swift in Sources */,
 				B640C5292266FB9300F08BBE /* HomeProtocol.swift in Sources */,
+				B648DC34226824A6007A4885 /* NearByModel.swift in Sources */,
 				B6FCF083225F3AF600AE23E9 /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

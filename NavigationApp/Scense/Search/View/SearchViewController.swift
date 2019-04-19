@@ -219,10 +219,16 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableView.automaticDimension
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("row: \(indexPath.row)")
+    }
 }
 
 extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         self.getData()
         self.tableView.dataSource = self
         self.tableView.delegate = self

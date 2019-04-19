@@ -8,10 +8,10 @@
 
 import UIKit
 import Mapbox
+import MapKit
 
 @objc class HomeViewController: BaseViewController, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var mapView: MGLMapView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var currentLocationView: UIView!
@@ -21,32 +21,25 @@ import Mapbox
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!
     
-    var baseDataModel = BaseDataModel()
     let settingService = SettingService()
     var sizingCell: HomeItemCollectionViewCell? = nil
     var placeNearView = PlaceNearView()
     var presenter: HomePresenter?
+    var nearByModel: [NearByModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupMapView()
     }
     
     //MARK: METHODS
     override func setupView() {
-        self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.navigationItem.hidesBackButton = true
-        mapView.styleURL = MGLStyle.lightStyleURL
-        mapView.tintColor = .currentLocationColor
-        mapView.logoView.isHidden = true
-        mapView.attributionButton.isHidden = true
-        mapView.delegate = self
-        mapView.showsUserLocation = true
+        LocationManager.shared.isLocationServiceEnabled ? setupUserLocation() : ()
         menuView.setRadiusView(currentLocationView.frame.size.height/2)
         currentLocationView.setRadiusView(currentLocationView.frame.size.height/2)
         whereGoLabel.text = "Where are you going \ntoday?"
         timeStandLabel.text = timeStandLabel.text?.getDateTimeCurrent()
-        baseDataModel.parseData()
+        baseDataModel.parseHomeData()
         collectionView.register(UINib(nibName: HomeItemCollectionViewCell.nibName(), bundle: nil),
                                 forCellWithReuseIdentifier: HomeItemCollectionViewCell.nibName())
         DispatchQueue.main.async {
@@ -59,19 +52,31 @@ import Mapbox
         }
     }
     
+    func setupUserLocation() {
+        mapView.tintColor = .currentLocationColor
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+    }
+    
     func loadNib() -> PlaceNearView {
         let infoWindow = PlaceNearView.instanceFromNib()
         return infoWindow
     }
     
     func pushPlaceNearView() {
-        bottomView.removeFromSuperview()
-        placeNearView.removeFromSuperview()
-        placeNearView = loadNib()
-        placeNearView.backgroundColor = .clear
-        //placeNearView.delegate = self
-        placeNearView.frame = CGRect(x: 0, y: self.view.frame.size.height - 200, width: placeNearView.frame.size.width, height: 200)
-        self.view.addSubview(placeNearView)
+        self.bottomView.isHidden = true
+        self.placeNearView.removeFromSuperview()
+        self.placeNearView = self.loadNib()
+        self.placeNearView.backgroundColor = .clear
+        self.placeNearView.delegate = self
+        self.placeNearView.frame = CGRect(x: 0, y: Constants.iHeight - self.placeNearView.containerView.frame.height - Constants.appDelegate.getHeightSafeArea(),
+                                          width: self.placeNearView.frame.size.width,
+                                          height: self.placeNearView.containerView.frame.height)
+        let transition = CATransition()
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        self.placeNearView.layer.add(transition, forKey: nil)
+        self.view.addSubview(self.placeNearView)
     }
     
     func getData() {
@@ -90,6 +95,11 @@ import Mapbox
     
     @IBAction func onCurrentLocationAction(_ sender: Any) {
         mapView.setCenter((mapView.userLocation?.coordinate)!, zoomLevel: 14.0, animated: true)
+    }
+    
+    @IBAction func onMenuAction(_ sender: Any) {
+        let menuVC = MenuViewController.initWithDefaultNib()
+        present(menuVC, animated: true, completion: nil)
     }
     
     @IBAction func onSearchAction(_ sender: Any) {
@@ -129,6 +139,38 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         default:
             break
         }
+        
+        if let userLocation = mapView.userLocation?.coordinate {
+            presenter?.getDataSuccess(userLocation.latitude, userLocation.longitude, 1500)
+        }
     }
 }
 
+extension HomeViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways:
+            LocationManager.shared.currentLocation = mapView.userLocation?.location
+            setupMapView()
+        case .authorizedWhenInUse:
+            LocationManager.shared.currentLocation = mapView.userLocation?.location
+            setupMapView()
+        default:
+            break
+        }
+    }
+}
+
+extension HomeViewController: PresenterToHomeViewProtocol {
+    func showData(_ list: [NearByModel]) {
+        nearByModel = list
+        print(nearByModel.count)
+    }
+}
+
+extension HomeViewController: PlaceNearViewDelegate {
+    @objc func onDismissView(_ view: PlaceNearView,_ sender: Any) {
+        view.removeFromSuperview()
+        bottomView.isHidden = false
+    }
+}

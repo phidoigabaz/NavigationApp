@@ -9,7 +9,18 @@
 import Foundation
 
 class HomeRouter: HomePresenterToRouterProtocol {
-    var view: HomeViewToPresenterProtocol?
-    var placeNearView: PlaceNearView?
     
+    static func createView() -> HomeViewController {
+        let view = HomeViewController.initWithDefaultNib()
+        let presenter: HomeViewToPresenterProtocol & InteractorToPresenterProtocol = HomePresenter()
+        let interactor: HomePresenterToInteractorProtocol = HomeInteractor()
+        let router: HomePresenterToRouterProtocol = HomeRouter()
+        
+        view.presenter = presenter as? HomePresenter
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        return view
+    }
 }
