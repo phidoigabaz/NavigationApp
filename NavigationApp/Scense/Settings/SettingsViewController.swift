@@ -71,15 +71,10 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return indexPath.section == 2 ? 200 : 50
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        switch section {
-        case 2:
-            return 200
-        default:
-            return 70
-        }
+       return baseDataModel.sectionModel[section].header.title == nil ? 0 : 70
     }
 }
