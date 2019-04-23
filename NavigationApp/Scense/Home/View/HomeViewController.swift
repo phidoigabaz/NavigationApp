@@ -8,7 +8,6 @@
 
 import UIKit
 import Mapbox
-import MapKit
 
 @objc class HomeViewController: BaseViewController, UICollectionViewDelegateFlowLayout {
     
@@ -42,10 +41,11 @@ import MapKit
         baseDataModel.parseHomeData()
         collectionView.register(UINib(nibName: HomeItemCollectionViewCell.nibName(), bundle: nil),
                                 forCellWithReuseIdentifier: HomeItemCollectionViewCell.nibName())
+
         DispatchQueue.main.async {
             self.collectionLayout.estimatedItemSize = CGSize(width: 50, height: 25)
             self.collectionLayout.itemSize = UICollectionViewFlowLayout.automaticSize
-//            self.collectionView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth,
+//            self.bottomView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth,
 //                                                                       height: self.collectionView.bounds.size.height),
 //                                                         colors: [.clear, .white])
             self.collectionView.reloadData()
@@ -56,6 +56,18 @@ import MapKit
         mapView.tintColor = .currentLocationColor
         mapView.delegate = self
         mapView.showsUserLocation = true
+    }
+    
+    func getData() {
+        if let userLocation = mapView.userLocation?.coordinate {
+            presenter?.getDataSuccess(userLocation.latitude, userLocation.longitude, 1500)
+        }
+    }
+    
+    func getUserLocation() {
+        if let location = mapView.userLocation {
+            LocationManager.shared.userLocation = location
+        }
     }
     
     func loadNib() -> PlaceNearView {
@@ -69,25 +81,19 @@ import MapKit
         self.placeNearView = self.loadNib()
         self.placeNearView.backgroundColor = .clear
         self.placeNearView.delegate = self
-        self.placeNearView.frame = CGRect(x: 0, y: Constants.iHeight - self.placeNearView.containerView.frame.height - Constants.appDelegate.getHeightSafeArea(),
-                                          width: self.placeNearView.frame.size.width,
-                                          height: self.placeNearView.containerView.frame.height)
-        let transition = CATransition()
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
-        self.placeNearView.layer.add(transition, forKey: nil)
-        self.view.addSubview(self.placeNearView)
-    }
-    
-    func getData() {
-        if mapView.showsUserLocation {
-            if let userLocation = mapView.userLocation?.coordinate {
-                settingService.getPlaceNearYou(lat: userLocation.latitude, lng: userLocation.longitude) { (err) in
-                    if err == nil {
-                        print("success")
-                    }
-                }
-            }
+        getUserLocation()
+        DispatchQueue.main.async {
+            self.getData()
+            //self.placeNearView.nearbyModel = self.nearByModel
+            self.placeNearView.collectionView.reloadData()
+            self.placeNearView.frame = CGRect(x: 0, y: Constants.iHeight - self.placeNearView.containerView.bounds.height - Constants.appDelegate.getHeightSafeArea(),
+                                              width: Constants.screenWidth,
+                                              height: self.placeNearView.containerView.bounds.height)
+            let transition = CATransition()
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromRight
+            self.placeNearView.layer.add(transition, forKey: nil)
+            self.view.addSubview(self.placeNearView)
         }
     }
     
@@ -136,12 +142,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch indexPath.row {
         case 0:
             pushPlaceNearView()
+        case 1:
+            let router = RouteViewController.initWithDefaultNib()
+            navigationController?.pushViewController(router, animated: true)
         default:
             break
-        }
-        
-        if let userLocation = mapView.userLocation?.coordinate {
-            presenter?.getDataSuccess(userLocation.latitude, userLocation.longitude, 1500)
         }
     }
 }
@@ -164,7 +169,6 @@ extension HomeViewController: CLLocationManagerDelegate {
 extension HomeViewController: PresenterToHomeViewProtocol {
     func showData(_ list: [NearByModel]) {
         nearByModel = list
-        print(nearByModel.count)
     }
 }
 

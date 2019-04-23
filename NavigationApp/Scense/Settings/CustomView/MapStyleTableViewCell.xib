@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map styles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qp-dG-a8m">
-                        <rect key="frame" x="20" y="20" width="89" height="20.5"/>
+                        <rect key="frame" x="20" y="0.0" width="89" height="20.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,24 +33,27 @@
                         </constraints>
                     </view>
                     <stackView contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XRo-Gi-6Sc">
-                        <rect key="frame" x="20" y="60.5" width="293" height="106"/>
+                        <rect key="frame" x="20" y="40.5" width="293" height="126"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJF-c9-7q3">
-                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="106"/>
+                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="126"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bp0-k3-eqD">
-                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="96"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-cD-CJC">
-                                        <rect key="frame" x="0.0" y="84" width="84.5" height="22"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-cD-CJC">
+                                        <rect key="frame" x="0.0" y="104" width="84.5" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="ZZe-L1-77U"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
-                                        <state key="normal" title="Default" image="circle-in-black">
+                                        <state key="normal" title="Default" image="circle-in-white">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSelectionMapStyle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0VU-D3-920"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -64,13 +67,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Frr-hp-oLV">
-                                <rect key="frame" x="104.5" y="0.0" width="84" height="106"/>
+                                <rect key="frame" x="104.5" y="0.0" width="84" height="126"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wQv-vV-lkf">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="96"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugm-Q3-RVz">
-                                        <rect key="frame" x="0.0" y="84" width="84" height="22"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugm-Q3-RVz">
+                                        <rect key="frame" x="0.0" y="104" width="84" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="6Rn-Yc-4SE"/>
                                         </constraints>
@@ -79,6 +82,9 @@
                                         <state key="normal" title="Satellite" image="circle-in-white">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSelectionMapStyle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mvb-Od-jhb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -92,13 +98,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-Le-T2i">
-                                <rect key="frame" x="208.5" y="0.0" width="84.5" height="106"/>
+                                <rect key="frame" x="208.5" y="0.0" width="84.5" height="126"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MxQ-dD-1sK">
-                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="96"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W77-of-7cE">
-                                        <rect key="frame" x="0.0" y="84" width="84.5" height="22"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W77-of-7cE">
+                                        <rect key="frame" x="0.0" y="104" width="84.5" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="ly7-Ns-w1G"/>
                                         </constraints>
@@ -107,6 +113,9 @@
                                         <state key="normal" title="Dark mode" image="circle-in-white">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSelectionMapStyle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aIl-CF-5si"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -132,24 +141,23 @@
                     <constraint firstItem="XRo-Gi-6Sc" firstAttribute="top" secondItem="3qp-dG-a8m" secondAttribute="bottom" constant="20" id="hRL-UE-Zzd"/>
                     <constraint firstItem="sST-H2-tMV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="lB5-Ar-Weu"/>
                     <constraint firstItem="XRo-Gi-6Sc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mt0-7q-xUA"/>
-                    <constraint firstItem="3qp-dG-a8m" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ybB-2E-99X"/>
+                    <constraint firstItem="3qp-dG-a8m" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ybB-2E-99X"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="wh6-2B-FwP"/>
             <connections>
-                <outlet property="darkStyleButton" destination="W77-of-7cE" id="Dll-Ts-zi9"/>
-                <outlet property="satelliteStyleButton" destination="ugm-Q3-RVz" id="psR-zi-SeH"/>
                 <outlet property="thumbaiDarkImageView" destination="MxQ-dD-1sK" id="0BQ-pc-m7Y"/>
                 <outlet property="thumbaiImageView" destination="bp0-k3-eqD" id="aNc-i5-LFA"/>
                 <outlet property="thumbaieSatelliteImageView" destination="wQv-vV-lkf" id="LAj-6t-ntV"/>
                 <outlet property="titleLabel" destination="3qp-dG-a8m" id="NVy-Ui-Khn"/>
-                <outlet property="whiteStyleButton" destination="hGF-cD-CJC" id="Ih7-pW-srM"/>
+                <outletCollection property="radioButton" destination="W77-of-7cE" collectionClass="NSMutableArray" id="Gz1-X9-4Rc"/>
+                <outletCollection property="radioButton" destination="hGF-cD-CJC" collectionClass="NSMutableArray" id="kUB-sa-AsF"/>
+                <outletCollection property="radioButton" destination="ugm-Q3-RVz" collectionClass="NSMutableArray" id="j0Z-0C-gEf"/>
             </connections>
             <point key="canvasLocation" x="146.40000000000001" y="232.08395802098951"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="circle-in-black" width="19.200000762939453" height="19.200000762939453"/>
         <image name="circle-in-white" width="18" height="18"/>
     </resources>
 </document>

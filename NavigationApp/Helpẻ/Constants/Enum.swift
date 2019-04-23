@@ -8,29 +8,29 @@
 
 import Foundation
 
-enum Types {
-    case lodging
-    case general_contractor
-    case university
-    case shopping_mall
-    case spa
-    case store
-    case restaurant
-    case cafe
-    case bar
-    case template
-    case unknow
+enum Types: String {
+    case lodging = "lodging"
+    case university = "university"
+    case shopping_mall = "Shopping_mall"
+    case spa = "spa"
+    case store = "store"
+    case restaurant = "restaurant"
+    case cafe = "cafe"
+    case bar = "bar"
+    case template = "template"
+    case hospital = "hospital"
+    case movie_theater = "movie_theater"
+    case school = "school"
+    case unknow = "unknow"
     
     func getTypeString() -> String {
         switch self {
         case .lodging:
             return "lodging"
-        case .general_contractor:
-            return "general_contractor"
         case .university:
             return "university"
         case .shopping_mall:
-            return "university"
+            return "shopping_mall"
         case .spa:
             return "spa"
         case .store:
@@ -52,20 +52,18 @@ enum Types {
         switch self {
         case .lodging:
             return nil
-        case .general_contractor:
-            return nil
         case .university:
             return nil
         case .shopping_mall:
-            return UIImage(named: "shopping-bag")
+            return UIImage(named: "shopping-mall")
         case .spa:
             return nil
         case .store:
-            return UIImage(named: "shopping-bag")
+            return UIImage(named: "shopping-mall")
         case .restaurant:
             return UIImage(named: "restaurant")
         case .cafe:
-            return UIImage(named: "coffee")
+            return UIImage(named: "cafe")
         case .bar:
             return nil
         case .template:

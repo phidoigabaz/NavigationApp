@@ -15,18 +15,30 @@ class MapStyleTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbaieSatelliteImageView: UIImageView!
     @IBOutlet weak var thumbaiDarkImageView: UIImageView!
     
-    @IBOutlet weak var whiteStyleButton: UIButton!
-    @IBOutlet weak var satelliteStyleButton: UIButton!
-    @IBOutlet weak var darkStyleButton: UIButton!
+    @IBOutlet var radioButton: [UIButton]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        thumbaiImageView.setRadiusView(20)
-        thumbaieSatelliteImageView.setRadiusView(20)
-        thumbaiDarkImageView.setRadiusView(20)
+        thumbaiImageView.setRadiusView(10)
+        thumbaiImageView.setBorderView(1, .black)
+        thumbaieSatelliteImageView.setRadiusView(10)
+        thumbaieSatelliteImageView.setBorderView(1, .lightGray)
+        thumbaiDarkImageView.setRadiusView(10)
+        thumbaiDarkImageView.setBorderView(1, .groupTableViewBackground)
     }
 
+    @IBAction func onSelectionMapStyle(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "circle-in-black"), for: .selected)
+        sender.setImage(UIImage(named: "circle-in-white"), for: .normal)
+        for  aButton:UIButton in radioButton! {
+            sender.isSelected = true
+            aButton.isSelected = false
+        }
+        
+        print(sender.currentTitle)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

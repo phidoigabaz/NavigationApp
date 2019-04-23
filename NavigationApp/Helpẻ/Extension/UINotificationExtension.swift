@@ -12,4 +12,5 @@ extension Notification.Name {
     static let kCastseeall = Notification.Name("kCastseeall")
     static let kRefreshTabbar = Notification.Name("kRefreshTabbar")
     static let kPushSticker = Notification.Name("kPushSticker")
+    static let kMapStyle = Notification.Name("kMapStyle")
 }

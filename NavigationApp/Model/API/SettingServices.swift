@@ -45,7 +45,7 @@ class SettingService: APIServiceObject {
             print(json)
             if err == nil {
                 var models = [NearByModel]()
-                for i in json["features"].arrayValue {
+                for i in json["results"].arrayValue {
                     let dto = NearByDTO(i)
                     let model = NearByModel(dto)
                     models.append(model)

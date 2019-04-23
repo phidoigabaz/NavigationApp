@@ -24,7 +24,7 @@ class IntroViewController: BaseViewController {
     override func setupView() {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipBarItemAction))
-        thumbaiImageView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth, height: Constants.iHeight), colors: [.clear, .black])
+        thumbaiImageView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth, height: Constants.iHeight), colors: [.clear, .black], alpha: 1)
         gotItButton.setRadiusButton(5)
         titleLabel.text = "Can't decide where to go next? \nWe've got you covered with best \nCity Guides and Maps for more than 30 world cities."
         introPlace = [IntroPlace("Hà Nội", nil),

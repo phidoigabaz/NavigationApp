@@ -138,11 +138,11 @@ class APIRequestProvider: NSObject {
     
     //Google map
     func getNearBySearch(lat: CLLocationDegrees,lng: CLLocationDegrees,radius: Int) -> DataRequest {
-        let urlString = requestURL.appending("mapbox.places/\(lat),\(lng).json")
+        let urlString = requestURL_Google.appending("nearbysearch/json?location=\(lat),\(lng)")
         var param = commonParam()
-        param["access_token"] = Constants.MAPBOX_ACESS_TOKEN
-        //param["radius"] = String(15000)
-        //param["sensor"] = "true"
+        param["key"] = Constants.GOOGLE_API_KEY
+        param["radius"] = String(radius)
+        param["sensor"] = "true"
         return alamoFireManager.request(urlString,
                                         method: .get,
                                         parameters: param,

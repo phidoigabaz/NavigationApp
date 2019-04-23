@@ -46,7 +46,7 @@ class BaseDataModel: NSObject {
         parseData("General", [(title: "Navigation settings",desc: nil, image: nil),
                               (title: "Download maps only by Wi-Fi",desc: nil, image: nil)], MenuSetupTableViewCell.nibName())
         parseData(nil, [(title: "Map type",desc: nil, image: nil)],         MapStyleTableViewCell.nibName())
-        parseData(nil, [(title: "Font & icons size",desc: nil, image: nil)], SettingItemTableViewCell.nibName())
+        parseData(nil, [(title: "Font & icons size",desc: nil, image: nil)], SettingSizeTableViewCell.nibName())
     }
     
     func parseData(_ title: String?, _ data: [(title: String,desc: String?,image: UIImage?)], _ identifier: String) {

@@ -12,5 +12,5 @@ target 'NavigationApp' do
   pod 'MapboxGeocoder.swift', '~> 0.10.2'
   pod 'Alamofire'
   pod 'SwiftyJSON'
-
+  pod 'MBProgressHUD', '~> 1.1.0'
 end

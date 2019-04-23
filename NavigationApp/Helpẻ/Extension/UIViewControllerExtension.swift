@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 extension UIViewController {
     class func initWithDefaultNib() -> Self {
@@ -76,5 +77,16 @@ extension UIViewController {
         DispatchQueue.main.async {
             viewController!.present(alertView, animated: true, completion: nil)
         }
+    }
+    
+    func showHud() {
+        MBProgressHUD.hide(for: view, animated: true)
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = .annularDeterminate
+        hud.label.text = "Loading"
+    }
+    
+    func hideHude() {
+        MBProgressHUD.hide(for: view, animated: true)
     }
 }

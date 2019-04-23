@@ -54,8 +54,12 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = MenuSetupTableViewCell.dequeueReuseCellWithNib(in: tableView, reuseIdentifier: MenuSetupTableViewCell.nibName())
             cell.titleLabel.text = rowModel.title
             return cell
-        } else {
+        } else if rowModel.identifier == MapStyleTableViewCell.nibName() {
             let cell = MapStyleTableViewCell.dequeueReuseCellWithNib(in: tableView, reuseIdentifier: MapStyleTableViewCell.nibName())
+            cell.titleLabel.text = rowModel.title
+            return cell
+        } else {
+            let cell = SettingSizeTableViewCell.dequeueReuseCellWithNib(in: tableView, reuseIdentifier: SettingSizeTableViewCell.nibName())
             cell.titleLabel.text = rowModel.title
             return cell
         }
@@ -71,10 +75,10 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 2 ? 200 : 50
+        return indexPath.section == 2 ? 140 : 50
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-       return baseDataModel.sectionModel[section].header.title == nil ? 0 : 70
+       return baseDataModel.sectionModel[section].header.title == nil ? 0 : 50
     }
 }

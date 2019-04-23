@@ -12,7 +12,7 @@ import UIKit
 struct Constants {
     
     static let MAPBOX_ACESS_TOKEN = "pk.eyJ1IjoicGhpZG9pZ2FiYXoiLCJhIjoiY2p1ZGhmbXo0MGVseDRlcjF3bG1ndWZ3OCJ9.HYgvGCXqshnQKi4lW8xfkQ"
-    static let GOOGLE_API_KEY = "AIzaSyAyp1YZg93UoA1jTGSiL_3-r3ZLd3GTsdg"
+    static let GOOGLE_API_KEY = "AIzaSyDjXiVrVqyOvpiQRG1xz1i3NqLEPz774wY"//"AIzaSyCbdYK-IsNVJDQe3Kas26khHfD3XwUOic4"
     
     static let latDefault = ""
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -22,11 +22,14 @@ struct Constants {
     static let iWidth = UIScreen.main.bounds.width
     static let iHeight = UIScreen.main.bounds.height
     
+    static let screenWidth = UIScreen.main.bounds.size.width
+    static let screenHeighr = UIScreen.main.bounds.size.height
+    
     static let cardWidth: CGFloat = 122
     
     static let kUserDefault = "kUserdefault"
     
-    static let photoUrl = "https://maps.googleapis.com/maps/api/place/photo?"
+    static let photoUrl = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
 }
 
 //C8C9CB -> search

@@ -21,6 +21,6 @@ class DownloadMapOfflineViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipBarItemAction))
         self.navigationController?.navigationBar.tintColor = .black
-        thumbaiImageView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth, height: Constants.iHeight), colors: [.clear, .black])
+        thumbaiImageView.addColorGradientLayerInBackground(frame: CGRect(x: 0, y: 0, width: Constants.iWidth, height: Constants.iHeight), colors: [.clear, .black], alpha: 1)
     }
 }

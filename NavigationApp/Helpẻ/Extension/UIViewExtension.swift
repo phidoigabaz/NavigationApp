@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 extension UIView {
 
@@ -39,10 +40,11 @@ extension UIView {
         self.layer.addSublayer(gradient)
     }
     // For insert layer in background
-    func addColorGradientLayerInBackground(frame: CGRect, colors:[UIColor]){
+    func addColorGradientLayerInBackground(frame: CGRect, colors:[UIColor], alpha: CGFloat){
         let gradient = CAGradientLayer()
         gradient.frame = frame
         gradient.colors = colors.map{$0.cgColor}
+        self.alpha = alpha
         self.layer.insertSublayer(gradient, at: 0)
     }
     
@@ -62,5 +64,16 @@ extension UIView {
         transition.subtype = CATransitionSubtype.fromRight
         placeNearView.layer.add(transition, forKey: nil)
         self.addSubview(placeNearView)
+    }
+    
+    func showHud() {
+        MBProgressHUD.hide(for: self, animated: true)
+        let hud = MBProgressHUD.showAdded(to: self, animated: true)
+        hud.mode = .annularDeterminate
+        hud.label.text = "Loading"
+    }
+    
+    func hideHude() {
+        MBProgressHUD.hide(for: self, animated: true)
     }
 }

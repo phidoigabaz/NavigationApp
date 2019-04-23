@@ -10,6 +10,10 @@ import UIKit
 
 class SettingSizeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sizeSlider: UISlider!
+    @IBOutlet weak var descLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
